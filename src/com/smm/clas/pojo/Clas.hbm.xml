@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="com.smm.clas.pojo.Clas" table="clas">
+		<id name="cid">
+			<generator class="native"/>
+		</id>
+		<property name="cname"/>
+
+		<!-- 配置学校 -->
+		<many-to-one name="school" lazy="false" class="com.smm.school.pojo.School" column="shid"></many-to-one>
+
+		<!-- 班级与学生的关联 -->
+		<set name="student">
+			<key column="cid"/>
+			<one-to-many class="com.smm.student.pojo.Student"/>
+		</set>
+	</class>
+</hibernate-mapping>
