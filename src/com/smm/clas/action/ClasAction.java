@@ -40,13 +40,13 @@ public class ClasAction extends ActionSupport implements ModelDriven<Clas>{
         this.page = page;
     }
 
-    private Integer shid;
+    private String shid;
 
-    public Integer getShid() {
+    public String getShid() {
         return shid;
     }
 
-    public void setShid(Integer shid) {
+    public void setShid(String shid) {
         this.shid = shid;
     }
 
@@ -70,8 +70,22 @@ public class ClasAction extends ActionSupport implements ModelDriven<Clas>{
 
     //添加班级的方法
     public String save(){
-        clasService.save(clas);
-        return "saveSuccess";
+
+        String cname = clas.getCname();
+        String cshid = clas.getSchool().getShid();
+        boolean existClas = clasService.findByCnameAndShid(cname,cshid);
+
+        if(existClas){
+            // 查询所有一级分类.
+            List<School> sList = schoolService.findAll();
+            // 将集合存入到值栈中.
+            ActionContext.getContext().getValueStack().set("sList", sList);
+            // 页面跳转:
+            return "addError";
+        }else {
+            clasService.save(clas);
+            return "saveSuccess";
+        }
     }
 
     // 编辑班级的方法:
@@ -88,8 +102,23 @@ public class ClasAction extends ActionSupport implements ModelDriven<Clas>{
 
     //更新班级的方法
     public String update(){
-        clasService.update(clas);
-        return "updateSuccess";
+        String cname = clas.getCname();
+        String cshid = clas.getSchool().getShid();
+        boolean existClas = clasService.findByCnameAndShid(cname,cshid);
+
+        if(existClas){
+            // 根据id查询班级:
+            clas = clasService.findByCid(clas.getCid());
+            // 查询所有一级分类:
+            List<School> sList = schoolService.findAll();
+            // 将集合存入到值栈中.
+            ActionContext.getContext().getValueStack().set("sList", sList);
+            // 页面跳转:
+            return "editError";
+        }else {
+            clasService.update(clas);
+            return "updateSuccess";
+        }
     }
 
     //删除班级的方法

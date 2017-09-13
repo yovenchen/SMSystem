@@ -5,8 +5,6 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.smm.clas.pojo.Clas;
 import com.smm.clas.service.ClasService;
-import com.smm.school.pojo.School;
-import com.smm.school.service.SchoolService;
 import com.smm.student.pojo.Student;
 import com.smm.student.service.StudentService;
 import com.smm.util.PageBean;
@@ -43,13 +41,13 @@ public class StudentAction extends ActionSupport implements ModelDriven<Student>
         this.page = page;
     }
 
-    private Integer cid;
+    private String cid;
 
-    public Integer getCid() {
+    public String getCid() {
         return cid;
     }
 
-    public void setCid(Integer cid) {
+    public void setCid(String cid) {
         this.cid = cid;
     }
 

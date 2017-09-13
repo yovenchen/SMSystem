@@ -43,9 +43,15 @@ public class SchoolAction extends ActionSupport implements ModelDriven<School>{
 
     //保存学校的信息
     public String save(){
-        //调用service方法保存
-        schoolService.save(school);
-        return "saveSuccess";
+
+        try {
+            //调用service方法保存
+            schoolService.save(school);
+            return "saveSuccess";
+
+        }catch (Exception e){
+            return "addError";
+        }
     }
 
     //修改学校的信息
@@ -57,6 +63,8 @@ public class SchoolAction extends ActionSupport implements ModelDriven<School>{
 
     //删除学校的信息
     public String delete(){
+        //如果级联删除，先查询再删除，配置cascade
+        school = schoolService.findByShid(school.getShid());
         //调用service方法删除
         schoolService.delete(school);
         return "deleteSuccess";
@@ -64,9 +72,16 @@ public class SchoolAction extends ActionSupport implements ModelDriven<School>{
 
     //更新学校信息
     public String update(){
-        //调用service方法更新
-       schoolService.update(school);
-       return "updateSuccess";
+        try{
+            //调用service方法更新
+           schoolService.update(school);
+           return "updateSuccess";
+
+        }catch (Exception e){
+            //接收shid，可以使用模型驱动，必须根据id查询再修改
+            school = schoolService.findByShid(school.getShid());
+            return "editError";
+        }
     }
 
     public String find(){

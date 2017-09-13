@@ -5,10 +5,10 @@
     
 <hibernate-mapping>
 	<class name="com.smm.user.pojo.User" table="user">
-		<id name="uid">
+		<id name="user_id">
 			<generator class="native"/>
 		</id>
-		<property name="username"/>
-		<property name="password"/>
+		<property name="user_name"/>
+		<property name="user_word"/>
 	</class>
 </hibernate-mapping>

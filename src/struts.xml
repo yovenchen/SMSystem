@@ -33,8 +33,10 @@
 		<action name="school_*" class="schoolAction" method="{1}">
 			<result name="findAll">/school/list.jsp</result>
 			<result name="find">/school/index.jsp</result>
+			<result name="addError">/school/addError.jsp</result>
 			<result name="saveSuccess" type="redirectAction">school_findAll.action?page=1</result>
 			<result name="editSuccess">/school/edit.jsp</result>
+			<result name="editError">/school/editError.jsp</result>
 			<result name="deleteSuccess" type="redirectAction">school_findAll.action?page=1</result>
 			<result name="updateSuccess" type="redirectAction">school_findAll.action?page=1</result>
 			<interceptor-ref name="privilegeInterceptor">
@@ -47,8 +49,10 @@
 		<action name="clas_*" class="clasAction" method="{1}">
 			<result name="findAll">/clas/list.jsp</result>
 			<result name="find">/clas/index.jsp</result>
+			<result name="addError">/clas/addError.jsp</result>
 			<result name="updateSuccess" type="redirectAction">clas_findAll.action?page=1</result>
 			<result name="editSuccess">/clas/edit.jsp</result>
+			<result name="editError">/clas/editError.jsp</result>
 			<result name="deleteSuccess" type="redirectAction">clas_findAll.action?page=1</result>
 			<result name="addPageSuccess">/clas/add.jsp</result>
 			<result name="findByShid">/clas/index.jsp</result>

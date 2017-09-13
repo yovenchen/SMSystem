@@ -31,7 +31,7 @@ public class StudentDao extends HibernateDaoSupport {
         this.getHibernateTemplate().save(student);
     }
 
-    public Student findByStuid(Integer stuid) {
+    public Student findByStuid(String stuid) {
         return this.getHibernateTemplate().get(Student.class,stuid);
     }
 
@@ -43,7 +43,7 @@ public class StudentDao extends HibernateDaoSupport {
         this.getHibernateTemplate().delete(student);
     }
 
-    public int findCountCid(Integer cid) {
+    public int findCountCid(String cid) {
         String hql = "select count(*) from Student s where s.clas.cid = ?";
         List<Long> list = this.getHibernateTemplate().find(hql, cid);
         if(list != null && list.size() > 0){
@@ -52,7 +52,7 @@ public class StudentDao extends HibernateDaoSupport {
         return 0;
     }
 
-    public List<Student> findByPageCid(Integer cid, int begin, int limit) {
+    public List<Student> findByPageCid(String cid, int begin, int limit) {
         String hql = "select s from Student s join s.clas c where c.cid = ?";
         List<Student> list = this.getHibernateTemplate().execute(new PageHibernateCallback<Student>(hql, new Object[]{cid}, begin, limit));
         if(list != null && list.size() > 0){

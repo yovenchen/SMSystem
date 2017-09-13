@@ -44,7 +44,7 @@ public class StudentService {
         studentDao.save(student);
     }
 
-    public Student findByStuid(Integer stuid) {
+    public Student findByStuid(String  stuid) {
         return studentDao.findByStuid(stuid);
     }
 
@@ -56,7 +56,7 @@ public class StudentService {
         studentDao.delete(student);
     }
 
-    public PageBean<Student> findByPageCid(Integer cid, Integer page) {
+    public PageBean<Student> findByPageCid(String cid, Integer page) {
         PageBean<Student> pageBean = new PageBean<Student>();
         // 设置当前页数:
         pageBean.setPage(page);

@@ -50,7 +50,7 @@ public class SchoolService {
         schoolDao.save(school);
     }
 
-    public School findByShid(Integer shid) {
+    public School findByShid(String shid) {
         return schoolDao.findByShid(shid);
     }
 

@@ -3,7 +3,7 @@ package com.smm.student.pojo;
 import com.smm.clas.pojo.Clas;
 
 public class Student {
-    private Integer stuid;
+    private String stuid;
     private String name;
     private String sex;
     private Integer age;
@@ -18,11 +18,11 @@ public class Student {
         this.clas = clas;
     }
 
-    public Integer getStuid() {
+    public String getStuid() {
         return stuid;
     }
 
-    public void setStuid(Integer stuid) {
+    public void setStuid(String stuid) {
         this.stuid = stuid;
     }
 

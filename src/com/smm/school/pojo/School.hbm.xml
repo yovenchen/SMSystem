@@ -4,15 +4,15 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
     
 <hibernate-mapping>
-	<class name="com.smm.school.pojo.School" table="school">
+	<class name="com.smm.school.pojo.School" table="SCHOOL">
 		<id name="shid">
-			<generator class="native"/>
+			<generator class="uuid"/>
 		</id>
 		<property name="shname"/>
 		<property name="shaddress"/>
 
 		<!-- 配置班级的集合 -->
-		<set order-by="cid" name="clas" lazy="false">
+		<set order-by="cid" name="clas" lazy="false" cascade="all"  inverse="false">
 			<key column="shid"/>
 			<one-to-many class="com.smm.clas.pojo.Clas"/>
 		</set>

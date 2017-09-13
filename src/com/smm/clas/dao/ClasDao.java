@@ -3,6 +3,7 @@ package com.smm.clas.dao;
 import com.smm.clas.pojo.Clas;
 import com.smm.util.PageHibernateCallback;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
 import java.util.List;
 
 public class ClasDao extends HibernateDaoSupport {
@@ -30,7 +31,7 @@ public class ClasDao extends HibernateDaoSupport {
         this.getHibernateTemplate().save(clas);
     }
 
-    public Clas findByCid(Integer cid) {
+    public Clas findByCid(String cid) {
         return this.getHibernateTemplate().get(Clas.class, cid);
     }
 
@@ -48,7 +49,7 @@ public class ClasDao extends HibernateDaoSupport {
         return list;
     }
 
-    public int findCountShid(Integer shid) {
+    public int findCountShid(String shid) {
         String hql = "select count(*) from Clas c where c.school.shid = ?";
         List<Long> list = this.getHibernateTemplate().find(hql, shid);
         if(list != null && list.size() > 0){
@@ -57,11 +58,29 @@ public class ClasDao extends HibernateDaoSupport {
         return 0;
     }
 
-    public List<Clas> findByPageShid(Integer shid, int begin, int limit) {
+    public List<Clas> findByPageShid(String shid, int begin, int limit) {
         String hql = "select c from Clas c join c.school sh where sh.shid = ?";
         List<Clas> list = this.getHibernateTemplate().execute(new PageHibernateCallback<Clas>(hql, new Object[]{shid}, begin, limit));
         if(list != null && list.size() > 0){
             return list;
+        }
+        return null;
+    }
+
+    public Clas findByCname(String cname) {
+        String hql = "from Clas c where c.cname = ?";
+        List<Clas> list = this.getHibernateTemplate().find(hql,cname);
+        if(list != null && list.size() > 0){
+            return list.get(0);
+        }
+        return null;
+    }
+
+    public Clas findByShid(String shid) {
+        String hql = "from Clas c where c.school.shid = ?";
+        List<Clas> list = this.getHibernateTemplate().find(hql,shid);
+        if(list != null && list.size() > 0){
+            return list.get(0);
         }
         return null;
     }

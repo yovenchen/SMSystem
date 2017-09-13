@@ -3,6 +3,7 @@ package com.smm.clas.service;
 import com.smm.clas.dao.ClasDao;
 import com.smm.clas.pojo.Clas;
 import com.smm.util.PageBean;
+
 import java.util.List;
 
 public class ClasService {
@@ -47,7 +48,7 @@ public class ClasService {
         clasDao.save(clas);
     }
 
-    public Clas findByCid(Integer cid) {
+    public Clas findByCid(String cid) {
         return clasDao.findByCid(cid);
     }
 
@@ -63,7 +64,7 @@ public class ClasService {
         return clasDao.findAll();
     }
 
-    public PageBean<Clas> findByPageShid(Integer shid, Integer page) {
+    public PageBean<Clas> findByPageShid(String shid, Integer page) {
         PageBean<Clas> pageBean = new PageBean<Clas>();
         // 设置当前页数:
         pageBean.setPage(page);
@@ -89,5 +90,18 @@ public class ClasService {
         List<Clas> list = clasDao.findByPageShid(shid,begin,limit);
         pageBean.setList(list);
         return pageBean;
+    }
+
+    public boolean findByCnameAndShid(String cname, String shid) {
+
+        Clas existClas = clasDao.findByCname(cname);
+        Clas existSchool = clasDao.findByShid(shid);
+
+        if(existClas!=null && existSchool!=null){
+            return true;
+        }else {
+            return false;
+        }
+
     }
 }

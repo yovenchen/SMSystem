@@ -4,31 +4,31 @@ package com.smm.user.pojo;
  * Created by TaroChen on 2017/8/4.
  */
 public class User {
-    private Integer uid;
-    private String username;
-    private String password;
+    private Integer user_id;
+    private String user_name;
+    private String user_word;
 
-    public Integer getUid() {
-        return uid;
+    public Integer getUser_id() {
+        return user_id;
     }
 
-    public void setUid(Integer uid) {
-        this.uid = uid;
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUser_word() {
+        return user_word;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUser_word(String user_word) {
+        this.user_word = user_word;
     }
 }

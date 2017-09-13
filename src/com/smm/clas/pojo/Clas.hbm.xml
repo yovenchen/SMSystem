@@ -4,9 +4,9 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
     
 <hibernate-mapping>
-	<class name="com.smm.clas.pojo.Clas" table="clas">
+	<class name="com.smm.clas.pojo.Clas" table="CLAS">
 		<id name="cid">
-			<generator class="native"/>
+			<generator class="uuid"/>
 		</id>
 		<property name="cname"/>
 
@@ -14,7 +14,7 @@
 		<many-to-one name="school" lazy="false" class="com.smm.school.pojo.School" column="shid"></many-to-one>
 
 		<!-- 班级与学生的关联 -->
-		<set name="student">
+		<set name="student" cascade="all"  inverse="false">
 			<key column="cid"/>
 			<one-to-many class="com.smm.student.pojo.Student"/>
 		</set>

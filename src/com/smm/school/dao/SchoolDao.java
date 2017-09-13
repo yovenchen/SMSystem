@@ -35,7 +35,7 @@ public class SchoolDao extends HibernateDaoSupport {
         this.getHibernateTemplate().save(school);
     }
 
-    public School findByShid(Integer shid) {
+    public School findByShid(String shid) {
         return this.getHibernateTemplate().get(School.class,shid);
     }
 

@@ -10,7 +10,7 @@ import java.util.Set;
  */
 public class School {
 
-    private Integer shid;
+    private String shid;
     private String shname;
     private String shaddress;
 
@@ -23,11 +23,11 @@ public class School {
         this.clas = clas;
     }
 
-    public Integer getShid() {
+    public String getShid() {
         return shid;
     }
 
-    public void setShid(Integer shid) {
+    public void setShid(String shid) {
         this.shid = shid;
     }
 

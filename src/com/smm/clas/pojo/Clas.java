@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class Clas {
 
-    private Integer cid;
+    private String cid;
     private String cname;
 
     //所属学校，存的是学校的对象
@@ -33,11 +33,11 @@ public class Clas {
         this.school = school;
     }
 
-    public Integer getCid() {
+    public String getCid() {
         return cid;
     }
 
-    public void setCid(Integer cid) {
+    public void setCid(String cid) {
         this.cid = cid;
     }
 

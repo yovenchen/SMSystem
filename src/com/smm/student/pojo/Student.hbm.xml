@@ -4,9 +4,9 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
     
 <hibernate-mapping>
-	<class name="com.smm.student.pojo.Student" table="student">
+	<class name="com.smm.student.pojo.Student" table="STUDENT">
 		<id name="stuid">
-			<generator class="native"/>
+			<generator class="uuid"/>
 		</id>
 		<property name="name"/>
 		<property name="sex"/>
