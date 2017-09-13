@@ -1,5 +1,5 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags" prefix="s"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <HTML>
 	<HEAD>
 		<meta http-equiv="Content-Language" content="zh-cn">
@@ -24,13 +24,14 @@
 	</HEAD>
 	
 	<body>
-		<form id="userAction_save_do" name="Form1" action="${pageContext.request.contextPath}/clas_save.action" method="post" enctype="multipart/form-data" onsubmit="return checkForm();">
+		<form id="userAction_save_do" name="Form1" action="${pageContext.request.contextPath}/clas_update.action" method="post" enctype="multipart/form-data" onsubmit="return checkForm();">
+			<input type="hidden" name="cid" value="<s:property value="model.cid"/>"/>
 			&nbsp;
 			<table cellSpacing="1" cellPadding="5" width="100%" align="center" bgColor="#eeeeee" style="border: 1px solid #8ba7e3" border="0">
 				<tr>
 					<td class="ta_01" align="center" bgColor="#afd1f3" colSpan="4"
 						height="26">
-						<strong><STRONG>添加班级</STRONG>
+						<strong><STRONG>该班级已存在，班级不可重复，请重新编辑！</STRONG>
 						</strong>
 					</td>
 				</tr>
@@ -40,16 +41,16 @@
 						班级名称：
 					</td>
 					<td class="ta_01" bgColor="#ffffff" >
-						<input type="text" name="cname" value="" id="cname" class="bg" maxlength="10"/>
+						<input type="text" name="cname" value="<s:property value="model.cname"/>" id="cname" class="bg" maxlength="10"/>
 					</td>
 					<td width="18%" align="center" bgColor="#f5fafe" class="ta_01">
 						所属的学校：
 					</td>
 					<td class="ta_01" bgColor="#ffffff" >
 						<select name="school.shid" id="shname">
-							<option id="select" value="">-请选择-</option>
+							<option id="select">-请选择-</option>
 							<s:iterator var="s" value="sList">
-								<option value="<s:property value="#s.shid"/>"><s:property value="#s.shname"/></option>
+								<option value="<s:property value="#s.shid"/>" <s:if test="#s.shid==model.school.shid">selected</s:if>><s:property value="#s.shname"/></option>
 							</s:iterator>
 						</select>
 					</td>
@@ -58,7 +59,7 @@
 				<tr>
 					<td class="ta_01" style="WIDTH: 100%" align="center"
 						bgColor="#f5fafe" colSpan="4">
-						<button type="submit" id="clasAction_save_do_submit" value="确定" class="button_ok">
+						<button type="submit" id="userAction_save_do_submit" value="确定" class="button_ok">
 							&#30830;&#23450;
 						</button>
 

@@ -11,6 +11,14 @@
             function addUser(){
                 window.location.href = "${pageContext.request.contextPath}/student_addPage.action";
             }
+
+            function del(){
+                if(!confirm("确认要删除该学生包括其所有信息吗？")){
+                    window.event.returnValue = false;
+                }else {
+                    document.getElementById("abc").submit();
+                }
+            }
 		</script>
 	</HEAD>
 	<body>
@@ -85,7 +93,8 @@
 											</td>
 
 											<td align="center" style="HEIGHT: 22px">
-												<a href="${pageContext.request.contextPath}/student_delete.action?stuid=<s:property value="#st.stuid"/>">
+												<a href="${pageContext.request.contextPath}/student_delete.action?stuid=<s:property value="#st.stuid"/>" onclick="del()"
+												   id="abc">
 													<img src="${pageContext.request.contextPath}/images/i_del.gif" width="16" height="16" border="0" style="CURSOR: hand">
 												</a>
 											</td>

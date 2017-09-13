@@ -37,12 +37,12 @@
 				</tr>
 				<tr>
 					<td width="18%" align="center" bgColor="#f5fafe" class="ta_01">
-						学校名称：<input type="text" name="shname" value="<s:property value="model.shname"/>" id="shname" class="bg"/>
+						学校名称：<input type="text" name="shname" value="<s:property value="model.shname"/>" id="shname" class="bg" maxlength="15"/>
 					</td>
 				</tr>
 				<tr>
 					<td width="18%" align="center" bgColor="#f5fafe" class="ta_01">
-						学校地址：<input type="text" name="shaddress" value="<s:property value="model.shaddress"/>" id="shaddress" class="bg"/>
+						学校地址：<input type="text" name="shaddress" value="<s:property value="model.shaddress"/>" id="shaddress" class="bg" maxlength="30"/>
 					</td>
 				</tr>
 				<tr>

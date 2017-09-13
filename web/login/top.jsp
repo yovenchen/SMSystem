@@ -28,6 +28,17 @@ TH {
 </style>
 		<link href="${pageContext.request.contextPath}/css/Style.css" rel="stylesheet" type="text/css">
 	</HEAD>
+	<script>
+
+        function quit(){
+            if(!confirm("确认要退出？")){
+                window.event.returnValue = false;
+            }else {
+                document.getElementById("abc").submit();
+            }
+        }
+
+	</script>
 	<body>
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
@@ -85,7 +96,7 @@ else
 										</td>
 										<td width="155" valign="bottom"
 											background="${pageContext.request.contextPath}/images/mis_05b.jpg">
-											用户名：<font color="blue"><s:property value="#session.existUser.username"/></font>
+											用户名：<strong style="font-size: 14px;color: red"><s:property value="#session.existUser.user_name"/></strong>
 										</td>
 										<td width="10" align="right"
 											background="${pageContext.request.contextPath}/images/mis_05b.jpg">
@@ -93,7 +104,8 @@ else
 										</td>
 
 										<td width="155" valign="bottom" align="center">
-											<a href="${pageContext.request.contextPath}/user_quit.action" target="_parent">退出</a>
+											<a href="${pageContext.request.contextPath}/user_quit.action" target="_parent" onclick="quit()"
+											   id="abc">退出</a>
 										</td>
 									</tr>
 								</table>

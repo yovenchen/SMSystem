@@ -13,6 +13,7 @@
                     alert("学校名称不能为空!");
                     return false;
                 }
+
                 var shaddress = document.getElementById("shaddress").value;
                 if(shaddress == null || shaddress == ''){
                     alert("学校地址不能为空!");
@@ -35,12 +36,12 @@
 				</tr>
 				<tr>
 					<td width="18%" align="center" bgColor="#f5fafe" class="ta_01">
-						学校名称：<input type="text" name="shname" value="" id="shname" class="bg"/>
+						学校名称：<input type="text" name="shname" value="" id="shname" class="bg" maxlength="15"/>
 					</td>
 				</tr>
 				<tr>
 					<td width="18%" align="center" bgColor="#f5fafe" class="ta_01">
-						学校地址：<input type="text" name="shaddress" value="" id="shaddress" class="bg"/>
+						学校地址：<input type="text" name="shaddress" value="" id="shaddress" class="bg" maxlength="30"/>
 					</td>
 				</tr>
 				<tr>

@@ -41,7 +41,7 @@
 						班级名称：
 					</td>
 					<td class="ta_01" bgColor="#ffffff" >
-						<input type="text" name="cname" value="<s:property value="model.cname"/>" id="cname" class="bg"/>
+						<input type="text" name="cname" value="<s:property value="model.cname"/>" id="cname" class="bg" maxlength="10"/>
 					</td>
 					<td width="18%" align="center" bgColor="#f5fafe" class="ta_01">
 						所属的学校：

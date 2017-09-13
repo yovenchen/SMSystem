@@ -30,7 +30,7 @@
 				<tr>
 					<td class="ta_01" align="center" bgColor="#afd1f3" colSpan="4"
 						height="26">
-						<strong><STRONG>添加班级</STRONG>
+						<strong><STRONG>该班级已录入，不可重复录入！</STRONG>
 						</strong>
 					</td>
 				</tr>

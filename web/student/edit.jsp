@@ -51,7 +51,7 @@
 
 		<tr>
 			<td width="18%" align="center" bgColor="#f5fafe" class="ta_01">
-				学生姓名：<input type="text" name="name" value="<s:property value="model.name"/>" id="studentAction_add_name" class="bg"/>
+				学生姓名：<input type="text" name="name" value="<s:property value="model.name"/>" id="studentAction_add_name" class="bg" maxlength="5"/>
 			</td>
 		</tr>
 		<tr>
@@ -65,7 +65,7 @@
 		</tr>
 		<tr>
 			<td width="18%" align="center" bgColor="#f5fafe" class="ta_01">
-				学生年龄：<input type="text" name="age" value="<s:property value="model.age"/>" id="age" class="bg"/>
+				学生年龄：<input type="text" name="age" value="<s:property value="model.age"/>" id="age" class="bg" maxlength="2"/>
 			</td>
 		</tr>
 		<tr>

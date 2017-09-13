@@ -11,6 +11,14 @@
             function addUser(){
                 window.location.href = "${pageContext.request.contextPath}/school/add.jsp";
             }
+
+            function del(){
+                if(!confirm("删除学校会将学校及其以下班级和学生删除，确认继续？")){
+                    window.event.returnValue = false;
+                }else {
+                    document.getElementById("abc").submit();
+                }
+            }
 		</script>
 	</HEAD>
 	<body>
@@ -78,7 +86,8 @@
 											</td>
 
 											<td align="center" style="HEIGHT: 22px">
-												<a href="${pageContext.request.contextPath}/school_delete.action?shid=<s:property value="#s.shid"/>">
+												<a href="${pageContext.request.contextPath}/school_delete.action?shid=<s:property value="#s.shid"/>" onclick="del()"
+												id="abc">
 													<img src="${pageContext.request.contextPath}/images/i_del.gif" width="16" height="16" border="0" style="CURSOR: hand">
 												</a>
 											</td>

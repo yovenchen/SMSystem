@@ -2,7 +2,7 @@
 <%@taglib uri="/struts-tags" prefix="s"%>
 <script type="text/javascript">
 function ini(){
-   document.form1.username.focus();
+   document.form1.user_name.focus();
 }
 </script>
 
@@ -43,7 +43,7 @@ function ini(){
 															<font color="000F60"><strong>用户名：</strong> </font>
 														</td>
 														<td>
-															<s:textfield name="username" id="username" cssClass="text" cssStyle="width: 160px;"/>
+															<s:textfield name="user_name" id="user_name" cssClass="text" cssStyle="width: 160px;"/>
 														</td>
 													</tr>
 													<tr>
@@ -51,7 +51,7 @@ function ini(){
 															<strong><font color="000F60">密码： </font> </strong>
 														</td>
 														<td>
-															<s:password name="password" id="password"  cssClass="text" cssStyle="width: 160px;" />
+															<s:password name="user_word" id="user_word"  cssClass="text" cssStyle="width: 160px;" />
 														</td>
 													</tr>
 													<tr>
