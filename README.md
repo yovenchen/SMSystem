@@ -1,7 +1,4 @@
-﻿##一、系统简介
-
-
-----------
+##一、系统简介
 
 
 这是一个基于SSH框架的校园信息管理系统
@@ -14,27 +11,17 @@
 
 •相关技术：Ajax异步校验，JQuery，Maven，前台EasyUI
 
-
 ----------
-
 
 ##二、系统运行截图
 
-
-----------
-
-
 ![登录界面](https://github.com/TaroYoVen/SMSystem/raw/master/image/login.jpg)
 
-
 ----------
-
 
 ![主界面](https://github.com/TaroYoVen/SMSystem/raw/master/image/main.jpg)
 
-
 ----------
-
 
 ![查询信息](https://github.com/TaroYoVen/SMSystem/raw/master/image/main.jpg)
 
