@@ -12,7 +12,7 @@
 
 **四、其他：**
 
-	Java + Jsp + Js + CSS + Html
+	Java + Jsp + Js + CSS + Html + Ajax
 
 **五、数据库设计**
 
@@ -48,8 +48,41 @@
 ----------
 查询信息
 
-![查询信息](https://github.com/TaroYoVen/SMSystem/raw/master/image/school.jpg)
+![查询学校](https://github.com/TaroYoVen/SMSystem/raw/master/image/school.jpg)
 
+![查询班级](https://github.com/TaroYoVen/SMSystem/raw/master/image/class.jpg)
 
+![查询学生](https://github.com/TaroYoVen/SMSystem/raw/master/image/student.jpg)
 
+----------
+学校管理
 
+![](https://github.com/TaroYoVen/SMSystem/raw/master/image/schoolSelect.jpg)
+
+![](https://github.com/TaroYoVen/SMSystem/raw/master/image/schoolAdd.jpg)
+
+![](https://github.com/TaroYoVen/SMSystem/raw/master/image/schoolEdit.jpg)
+
+![](https://github.com/TaroYoVen/SMSystem/raw/master/image/schoolError.jpg)
+
+----------
+班级管理
+
+![](https://github.com/TaroYoVen/SMSystem/raw/master/image/classSelect.jpg)
+
+![](https://github.com/TaroYoVen/SMSystem/raw/master/image/classAdd.jpg)
+
+![](https://github.com/TaroYoVen/SMSystem/raw/master/image/classEdit.jpg)
+
+![](https://github.com/TaroYoVen/SMSystem/raw/master/image/classError.jpg)
+
+----------
+学生管理
+
+![](https://github.com/TaroYoVen/SMSystem/raw/master/image/studentSelect.jpg)
+
+![](https://github.com/TaroYoVen/SMSystem/raw/master/image/studentAdd.jpg)
+
+![](https://github.com/TaroYoVen/SMSystem/raw/master/image/studentEdit.jpg)
+
+![](https://github.com/TaroYoVen/SMSystem/raw/master/image/studentError.jpg)
