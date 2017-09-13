@@ -1,8 +1,8 @@
 **一、简介：**
 
-	这是一个校园信息管理系统，可以查询学校，学校下的班级，班级里的学生的信息，以及对各层信息的增删改查的管理
+	这是一个校园信息管理系统，可以查询学校，学校下的班级，班级里的学生的信息，以及对各层信息的增删改查的管理，实现了信息的关联和安全校验
 
-**二、开发环境：**
+**二、开发环境(工具)：**
 
 	IntelliJ IDEA 2017.01 + Tomcat + Win10 + Mysql + PowerDesigner + Adobe Photoshop CC (64 Bit) 
 
@@ -10,7 +10,7 @@
 
 	Struts2 + Hibernate + Spring
 
-**四、其他：**
+**四、其他技术：**
 
 	Java + Jsp + Js + CSS + Html + Ajax
 
@@ -85,4 +85,4 @@
 
 ![](https://github.com/TaroYoVen/SMSystem/raw/master/image/studentEdit.jpg)
 
-![](https://github.com/TaroYoVen/SMSystem/raw/master/image/studentError.jpg)
+----------
