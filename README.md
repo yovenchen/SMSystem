@@ -15,7 +15,7 @@
 
 ##二、系统运行截图
 
-![登录界面](https://github.com/TaroYoVen/SMSystem/raw/master/image/login.jpg)
+![登录界面](https://github.com/TaroYoVen/SMSystem/raw/master/image/login_1.jpg)
 
 ----------
 
@@ -23,7 +23,7 @@
 
 ----------
 
-![查询信息](https://github.com/TaroYoVen/SMSystem/raw/master/image/main.jpg)
+![查询信息](https://github.com/TaroYoVen/SMSystem/raw/master/image/school.jpg)
 
 
 
